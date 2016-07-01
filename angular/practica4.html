@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practica 4</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="libreria/angular.min.js"></script>
+	<script src="js/practica4.js"></script>
+</head>
+<body>
+	<div class="container"><div class="well well-success"><center><h3>"Universidad Nacional de Loja"</h3></center><br></div></div>
+	<div ng-app="alumnos">
+		<div ng-controller="controlador">
+			<form ng-submit="agregarAlumno()">
+				
+				<label>Ingresar una Nueva persona</label><br><br>
+				<input type="text" name="nombre" placeholder="Ingresar el Nombre" ng-model="nombres">
+				<input type="text" name="telefono" placeholder="Ingresar el Telefono" ng-model="telefono"> 
+				<select ng-model="materia">
+					<option>Programacion Avanzada</option>
+					<option>Contabilidad</option>
+					<option>Arquitectura de Computadores</option>
+					<option>Ética</option>
+				</select>  &nbsp; &nbsp;
+				<input type="submit" value="Ingresar">
+
+			<br>
+			<br>
+			</form>
+			<label>Buscar: </label> <input type="text" name="" ng-model='busqueda' placeholder="Busca">
+			<table class="table table-striped">
+				<tr>
+					<td><a href="" ng-click="ordenar('nombres')"> Nombres</a></td>
+					<td><a href="" ng-click="ordenar('telefono')"> Telefono</a></td>
+					<td><a href="" ng-click="ordenar('materia')"> Materia</a></td>
+					<td>opciones</td>
+				</tr>
+				<tr ng-repeat="alumno in listaAlumnos | orderBy:ordenado | filter:busqueda">
+					<td>{{alumno.nombres | uppercase}}</td>
+					<td>{{alumno.telefono}}</td>
+					<td>{{alumno.materia | lowercase}}</td>
+					
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

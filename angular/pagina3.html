@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Práctica 3</title>
+	<script src="libreria/angular.min.js"></script>
+	<script src="js/practica3.js"></script>
+</head>
+<body>
+
+<div ng-app="aplicacion">
+	<div ng-controller="controlador">
+
+		<div ng-repeat="m in matriculados">
+			<label>{{m.nombre}} </label>
+
+			
+				
+		</div>
+		<a ng-click="agregarItem()" href="">Agregar</a>
+		<br><br>
+		<a href="" ng-click="eliminarItem()">Eliminar</a>
+		<br>
+		<form ng-submit="ingresarItem()">
+			<input type="text" ng-model="nuevaPersona" name="nombre" placeholder="Ingrese su nombre">
+			<button type="submit">Agregar</button>	
+		</form>
+
+
+	</div>
+</div>
+
+</body>
+</html>
+

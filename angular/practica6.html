@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<title>Practica 6</title>
+	<link rel="stylesheet" href="libreria/docs/components/bootstrap/css/bootstrap.min.css">
+	<script src="libreria/angular.min.js"></script>
+	<script src="libreria/angular-route.js"></script>
+	<script src="js/practica6.js"></script>
+
+</head>
+<body ng-app="app">
+
+	<div ng-controller="controlador">
+	{{nombre}}
+
+		<a href="#/p1/">Practica #1</a>
+		<a href="#/p2/">Practica #2</a>
+		<a href="#/p3/">Practica #3</a>
+		<a href="#/p4/">Practica #4</a>
+		<a href="#/p5/">Practica #5</a>
+	</div>
+
+	<div ng-view="vm"></div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html ng-app><!--ng-app directiva q sirve para ejecutar codigo angular en todo el html permite dar caracteristicas especiales-->
+<head>
+	<meta charset="UTF-8">
+	<title>Práctica 1</title>
+	
+	<script src="libreria/angular.min.js"></script>
+	
+</head>
+<body>
+	<div>
+			<h1><center><strong>{{"Hola Quinto B"}}</strong></center></h1>
+	</div>
+
+	<div ng-app>
+		<div >
+			{{"Hola Manuel"}}
+		</div>
+		<div>
+			<br>NOMBRES<input type="text" name="nombre" placeholder="Ingrese el Nombre" ng-model="nombre"><br>
+			
+			APELLIDOS<input type="text" name="apellido" placeholder="Ingrese el Apellido" ng-model="apellido"><br>
+			
+			CÉDULA<input type="text" name="cedula" placeholder="Ingrese la cédula" ng-model="cedula"><br>
+			<label>Su nombre, apellido es:"{{nombre}} {{apellido}} con numero de cedula: {{cedula}}"</label></input><br>
+		</div>
+	</div>
+	
+
+</body>
+</html>
